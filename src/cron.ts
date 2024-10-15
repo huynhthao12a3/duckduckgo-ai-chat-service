@@ -1,8 +1,8 @@
 import * as cache from "./cache.ts";
 
 function cron() {
-  const cron_var = Deno.env.get("CLEAN_CACHE_CRON");
-  let cron = 24;
+  const cron_var = 24; //Deno.env.get("CLEAN_CACHE_CRON");
+  let cron = 1;
   if (cron_var !== undefined) {
     cron = Number(cron_var);
   }

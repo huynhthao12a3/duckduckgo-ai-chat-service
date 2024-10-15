@@ -4,8 +4,8 @@ import { BlankEnv, BlankSchema } from "jsr:@hono/hono/types";
 import { rateLimiter } from "npm:hono-rate-limiter";
 
 function limit(app: Hono<BlankEnv, BlankSchema, "/">) {
-  const limit_var = Deno.env.get("LIMIT");
-  let limit = 5;
+  const limit_var = 5; //Deno.env.get("LIMIT");
+  let limit = 2;
   if (limit_var !== undefined) {
     limit = Number(limit_var);
   }
